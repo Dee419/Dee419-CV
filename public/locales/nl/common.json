@@ -1,0 +1,75 @@
+{
+  "title": {
+    "subTitle": "Student Toegepaste Informatica | Full-Stack Developer"
+  },
+  "contactDetails": {
+    "title": "Contact Details",
+    "address": "Moorsel, Tervuren, Vlaams-Brabant, België"
+  },
+  "education": {
+    "title": "Onderwijs",
+    "middelbareSchool": {
+      "title": "Middelbare school (Latijn-Moderne Talen)"
+    },
+    "seventhYearSchool": {
+      "title": "Middelbare school (Zevende jaar)"
+    },
+    "ucll": "UC Leuven Limburg",
+    "associateDegreeProgramming": {
+      "title": "Graduaat Programmeren",
+      "honors": "Met grote onderscheiding"
+    },
+    "bachelorDegreeAppliedComputerScience": {
+      "title": "Professionele Bachelor Toegepaste Informatica"
+    }
+  },
+  "languages": {
+    "title": "Talen",
+    "dutch": {
+      "title": "Nederlands",
+      "proficiency": "Moedertaal"
+    },
+    "english": {
+      "title": "Engels",
+      "proficiency": "Moedertaal"
+    },
+    "french": {
+      "title": "Frans",
+      "proficiency": "Basiskennis (A2)"
+    }
+  },
+  "ownProjects": {
+    "title": "Eigen projecten",
+    "codingCat": {
+      "title": "Coding Cat: websiteje om JS te leren"
+    },
+    "rosproject": {
+      "title": "ROSProject: POS-systeem voor restauranten"
+    }
+  },
+  "aboutMe": {
+    "title": "Over mij",
+    "description": "Ik ben een enthousiaste student Toegepaste Informatica met een passie voor full-stack ontwikkeling. In mijn vrije tijd programmeer ik graag aan verschillende eigen projecten."
+  },
+  "workExperience": {
+    "title": "Werkervaring",
+    "coderdojo": "3 jaar vrijwilliger begeleider bij <1>Coderdojo Leuven</1>",
+    "internship": "3 maanden stagiair bij <1>Strouwi</1> in 2024"
+  },
+  "skills": {
+    "title": "Skills",
+    "strong": {
+      "title": "Sterk"
+    },
+    "advanced": {
+      "title": "Gevorderd"
+    },
+    "basic": {
+      "title": "Bekend met"
+    }
+  },
+  "funFact": {
+    "title": "Fun Fact!",
+    "description": "Deze CV is gemaakt met <0>NextJS</0>, <1>React</1>, <2>TailwindCSS</2> and <3>i18next</3>. Je kan de source code op mijn <4>GitHub</4> vinden!"
+  }
+}

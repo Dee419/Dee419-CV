@@ -1,0 +1,124 @@
+{
+  "document": {
+    "name": "CV_Yorick_Allie"
+  },
+  "title": {
+    "fullName": "Yorick Allie",
+    "subTitle": "Student Applied Computer Science | Full-Stack Developer"
+  },
+  "contactDetails": {
+    "title": "Contact Details",
+    "email": "yorick.allie@hotmail.com",
+    "phone": "(+32) 468 13 32 25",
+    "address": "Moorsel, Tervuren, Flemish-Brabant, Belgium",
+    "gitHub": "https://github.com/Dee419",
+    "linkedIn": "https://www.linkedin.com/in/yorick-allie-67769b2b7"
+  },
+  "education": {
+    "title": "Education",
+    "middelbareSchool": {
+      "title": "High school (Latin-Modern Languages)",
+      "description": "GO! Atheneum KA Tervuren",
+      "duration": "2012 - 2018"
+    },
+    "seventhYearSchool": {
+      "title": "High school (Seventh Year)",
+      "description": "GO! De Ring",
+      "duration": "2021 - 2022"
+    },
+    "ucll": "UC Leuven Limburg",
+    "associateDegreeProgramming": {
+      "title": "Associate Degree Programming",
+      "honors": "With great distinction",
+      "duration": "2022 - 2024"
+    },
+    "bachelorDegreeAppliedComputerScience": {
+      "title": "PBA Applied Computer Science",
+      "duration": "2024 - September 2026"
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "dutch": {
+      "title": "Dutch",
+      "proficiency": "Mother tongue"
+    },
+    "english": {
+      "title": "English",
+      "proficiency": "Mother tongue"
+    },
+    "french": {
+      "title": "French",
+      "proficiency": "Elementary (A2)"
+    }
+  },
+  "ownProjects": {
+    "title": "Own projects",
+    "secondDiscordBot": {
+      "title": "Second Discord Bot",
+      "url": "https://github.com/Dee419/Second-Discord-Bot/"
+    },
+    "rosproject": {
+      "title": "ROSProject: POS system for restaurants",
+      "url": "https://ros-project.be/"
+    },
+    "codingCat": {
+      "title": "Coding Cat: website to learn JS",
+      "url1": "https://github.com/Dee419/Coding-Cat/",
+      "url2": "https://coding-cat.azurewebsites.net/"
+    },
+    "steamWorkshop": {
+      "title": "Steam game mods",
+      "url": "https://steamcommunity.com/id/DeesID/myworkshopfiles/"
+    }
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "description": "I'm an enthusiastic Applied Computer Science student with a passion for full-stack development. In my free time, I enjoy programming on various projects of my own."
+  },
+  "workExperience": {
+    "title": "Work experience"
+  },
+  "skills": {
+    "title": "Skills",
+    "strong": {
+      "title": "Strong",
+      "items": [
+        "Java",
+        "C#",
+        "JavaScript",
+        "Typescript",
+        "React/NextJS",
+        "HTML/CSS",
+        "SQL",
+        "MySQL",
+        "Git",
+        "Agile/Scrum"
+      ]
+    },
+    "advanced": {
+      "title": "Advanced",
+      "items": [
+        "Python",
+        "PostgreSQL",
+        "MongoDB",
+        "Vue/Vite",
+        "Devops (Azure, CI/CD)",
+        "Computer Networking (Cisco)"
+      ]
+    },
+    "basic": {
+      "title": "Familiar with",
+      "items": [
+        "Lua",
+        "C",
+        "C++"
+      ]
+    },
+    "noSkills": "No skills found"
+  },
+  "funFact": {
+    "title": "Fun Fact!",
+    "description": "This CV is made with <0>NextJS</0>, <1>React</1>, <2>TailwindCSS</2> and <3>i18next</3>. You can find the source code on my <4>GitHub</4>!"
+  }
+}

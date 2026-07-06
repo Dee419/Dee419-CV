@@ -1,115 +1,87 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import React from "react";
+import Head from "next/head";
+import ContactDetails from "@/components/ContactDetails";
+import Education from "@/components/Education";
+import Languages from "@/components/Languages";
+import OwnProjects from "@/components/OwnProjects";
+import {useReactToPrint} from "react-to-print";
+import WorkExperience from "@/components/WorkExperience";
+import Skills from "@/components/Skills";
+import {useTranslation} from "next-i18next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import AboutMe from "@/components/AboutMe";
+import CVFunFact from "@/components/CVFunFact";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const Home: React.FC = () => {
+	const { t, i18n } = useTranslation()
+	const currentLanguage = i18n.language;
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+	const contentRef = React.useRef<HTMLDivElement>(null);
+	const reactToPrint = useReactToPrint({contentRef, documentTitle: `${t("document.name")}_${currentLanguage.toUpperCase()}`});
 
-export default function Home() {
-  return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+	React.useEffect(() => {
+		if (contentRef.current) {
+			reactToPrint();
+		}
+	}, [reactToPrint]);
+
+	return (
+		<>
+			<Head>
+				<title>CV</title>
+			</Head>
+			<main
+				style={{
+					margin: '2em'
+				}}
+				ref={contentRef}
+			>
+				<h1>{t("title.fullName")}</h1>
+				<hr style={{ borderColor: '#4472C4' }} />
+				<h2>{t("title.subTitle")}</h2>
+				<div
+					style={{
+						display: 'flex',
+						flexDirection: 'row',
+						gap: '0.5em',
+						marginTop: '2em',
+						alignItems: 'stretch'
+					}}
+				>
+					<div style={{ flex: 1, width: '50%' }}>
+						<ContactDetails />
+						<Education style={{ marginTop: '1em' }} detailed />
+						<Languages style={{ marginTop: '1em' }} />
+						<CVFunFact style={{ marginTop: '1em' }}/>
+					</div>
+					<div
+						style={{
+							width: '1px',
+							background: '#4472C4',
+							margin: '0 1em',
+							borderRadius: '1px'
+						}}
+					/>
+					<div style={{ flex: 1, width: '50%' }}>
+						<AboutMe />
+						<WorkExperience style={{ marginTop: '1em' }} />
+						<Skills style={{ marginTop: '1em' }} />
+						<OwnProjects style={{ marginTop: '1em' }} />
+					</div>
+				</div>
+			</main>
+			<script src="https://kit.fontawesome.com/38d9b77779.js" crossOrigin="anonymous" />
+		</>
+	);
+};
+
+export const getServerSideProps = async (context: any) => {
+	const {locale} = context;
+	return{
+		props: {
+			...(await serverSideTranslations(locale ?? "en", ["common"])),
+		},
+	};
 }
+
+export default Home;
