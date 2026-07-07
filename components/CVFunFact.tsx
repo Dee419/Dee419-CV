@@ -12,10 +12,10 @@ const CVFunFact: React.FC<{ style?: React.CSSProperties }> = ({ style }) => {
                     <Trans
                         i18nKey="funFact.description"
                         components={[
-                            <strong key="0" />, // <0> NextJS
-                            <strong key="1" />, // <1> React
-                            <strong key="2" />, // <2> TailwindCSS
-                            <strong key="3" />, // <3> i18next
+                            <code key="0" className="font-bold"/>, // <0> NextJS
+                            <code key="1" className="font-bold"/>, // <1> React
+                            <code key="2" className="font-bold"/>, // <2> TailwindCSS
+                            <code key="3" className="font-bold"/>, // <3> i18next
                             <a
                                 key="4"
                                 href={`${t("contactDetails.gitHub")}/Dee419-CV`}
