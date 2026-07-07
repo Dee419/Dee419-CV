@@ -41,10 +41,10 @@
   "ownProjects": {
     "title": "Eigen projecten",
     "codingCat": {
-      "title": "Coding Cat: websiteje om JS te leren"
+      "title": "Coding Cat: interactief platform om JS te leren"
     },
     "rosproject": {
-      "title": "ROSProject: POS-systeem voor restauranten"
+      "title": "ROSProject: POS-systeem voor restaurants"
     }
   },
   "aboutMe": {
@@ -70,6 +70,6 @@
   },
   "funFact": {
     "title": "Fun Fact!",
-    "description": "Deze CV is gemaakt met <0>NextJS</0>, <1>React</1>, <2>TailwindCSS</2> and <3>i18next</3>. Je kan de source code op mijn <4>GitHub</4> vinden!"
+    "description": "Dit CV is gemaakt met <0>NextJS</0>, <1>React</1>, <2>TailwindCSS</2> en <3>i18next</3>. Je kan de source code op mijn <4>GitHub</4> vinden!"
   }
 }
